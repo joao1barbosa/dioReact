@@ -1,15 +1,14 @@
-interface ICard {
-  id: number,
-  paragraph: string,
-  details: string
-}
+import { Box, ChakraProvider } from "@chakra-ui/react"
+import { Header } from "./Header"
+import { Form } from "./Form"
 
-export const Card = ({ id, paragraph, details }: ICard) => {
+export const Card = () => {
   return(
-    <div>
-      <h1>Card {id}</h1>
-      <p>{paragraph}</p>
-      <p>{details}</p>
-    </div>
+    <ChakraProvider>
+      <Box height='100vh' width='100wh' backgroundColor='#9413dc' padding='25px'>
+        <Header/>
+        <Form/>
+      </Box>
+    </ChakraProvider>
   )
 }
